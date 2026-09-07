@@ -1,0 +1,6 @@
+export { FilterPrice } from './ui/filter-price/FilterPrice'
+export { BrandFilter } from './ui/BrandFilter'
+export { ButtonReset } from './ui/ButtonReset'
+export { CaseShape } from './ui/CaseShape'
+export { WaterResistance } from './ui/WaterResistance'
+export { FilterColor } from './ui/filter-color/FilterColor'

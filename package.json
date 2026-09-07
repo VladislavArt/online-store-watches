@@ -3,23 +3,35 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev:client": "next dev",
+    "dev:server": "json-server --watch db.json --port 4000",
+    "dev": "concurrently \"yarn dev:client\" \"yarn dev:server\"",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.100.14",
+    "axios": "^1.17.0",
     "next": "16.2.6",
+    "rc-slider": "^11.1.9",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "react-number-format": "^5.4.5",
+    "use-debounce": "^10.1.1",
+    "zod": "^4.4.3",
+    "zustand": "^5.0.14"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@tanstack/react-query-devtools": "^5.101.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "concurrently": "^10.0.3",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
+    "json-server": "^0.17.4",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

@@ -1,0 +1,267 @@
+{
+	"brands": [
+		{ "id": 1, "name": "Fossil", "slug": "fossil" },
+		{ "id": 2, "name": "Timex", "slug": "timex" },
+		{ "id": 3, "name": "Movado", "slug": "movado" },
+		{ "id": 4, "name": "Daniel Wellington", "slug": "daniel-wellington" },
+		{ "id": 5, "name": "Armitron", "slug": "armitron" },
+		{ "id": 6, "name": "Rolex", "slug": "rolex" },
+		{ "id": 7, "name": "Cartier", "slug": "cartier" },
+		{ "id": 8, "name": "Casio", "slug": "casio" },
+		{ "id": 9, "name": "Guess", "slug": "guess" },
+		{ "id": 10, "name": "Trussardi", "slug": "trussardi" },
+		{ "id": 11, "name": "Calvin Klein", "slug": "calvin-klein" }
+	],
+	"products": [
+		{
+      "id": 101,
+      "title": "Machine Chronograph Black",
+      "price": 336.23,
+      "brandId": 1,
+      "waterResistance": true,
+      "caseShape": "round",
+      "color": "black",
+      "image": "/watches/fossil-machine.png"
+    },
+    {
+      "id": 102,
+      "title": "Heritage Automatic Blue",
+      "price": 425.50,
+      "brandId": 1,
+      "waterResistance": true,
+      "caseShape": "round",
+      "color": "blue",
+      "image": "/watches/fossil-automatic-blue.png"
+    },
+    {
+      "id": 103,
+      "title": "Minimalist Slim Leather",
+      "price": 400.75,
+      "brandId": 1,
+      "waterResistance": false,
+      "caseShape": "round",
+      "color": "black",
+      "image": "/watches/fossil-minimalist.png"
+    },
+    {
+      "id": 104,
+      "title": "Expedition Scout Olive",
+      "price": 500.22,
+      "brandId": 2,
+      "waterResistance": true,
+      "caseShape": "round",
+      "color": "grey",
+      "image": "/watches/timex-expedition.png"
+    },
+    {
+      "id": 105,
+      "title": "Marlin Hand-Wound Silver",
+      "price": 500.20,
+      "brandId": 2,
+      "waterResistance": false,
+      "caseShape": "round",
+      "color": "silver",
+      "image": "/watches/timex-marlin.png"
+    },
+    {
+      "id": 106,
+      "title": "Easy Reader Classic",
+      "price": 600.10,
+      "brandId": 2,
+      "waterResistance": false,
+      "caseShape": "round",
+      "color": "silver",
+      "image": "/watches/timex-reader.png"
+    },
+    {
+      "id": 107,
+      "title": "Museum Classic Black-Gold",
+      "price": 1301.120,
+      "brandId": 3,
+      "waterResistance": false,
+      "caseShape": "round",
+      "color": "gold",
+      "image": "/watches/movado-museum.png"
+    },
+    {
+      "id": 108,
+      "title": "Bold Evolution Silver Dial",
+      "price": 1068.70,
+      "brandId": 3,
+      "waterResistance": true,
+      "caseShape": "round",
+      "color": "silver",
+      "image": "/watches/movado-bold.png"
+    },
+    {
+      "id": 109,
+      "title": "Heritage Series Calendoplan",
+      "price": 1575.20,
+      "brandId": 3,
+      "waterResistance": true,
+      "caseShape": "round",
+      "color": "black",
+      "image": "/watches/movado-calendoplan.png"
+    },
+    {
+      "id": 110,
+      "title": "Iconic Link Silver",
+      "price": 500.50,
+      "brandId": 4,
+      "waterResistance": false,
+      "caseShape": "round",
+      "color": "silver",
+      "image": "/watches/dw-iconic.png"
+    },
+    {
+      "id": 111,
+      "title": "Sport Digital Chronograph",
+      "price": 700.50,
+      "brandId": 5,
+      "waterResistance": true,
+      "caseShape": "round",
+      "color": "black",
+      "image": "/watches/armitron-sport.png"
+    },
+    {
+      "id": 112,
+      "title": "Dress Analog Steel",
+      "price": 600.50,
+      "brandId": 5,
+      "waterResistance": false,
+      "caseShape": "round",
+      "color": "silver",
+      "image": "/watches/armitron-dress.png"
+    },
+    {
+      "id": 113,
+      "title": "Submariner Date Green",
+      "price": 1000,
+      "brandId": 6,
+      "waterResistance": true,
+      "caseShape": "round",
+      "color": "green",
+      "image": "/watches/rolex-submariner.png"
+    },
+    {
+      "id": 114,
+      "title": "Datejust 41 Blue Dial",
+      "price": 800.30,
+      "brandId": 6,
+      "waterResistance": true,
+      "caseShape": "round",
+      "color": "blue",
+      "image": "/watches/rolex-datejust.png"
+    },
+    {
+      "id": 115,
+      "title": "Cellini Time Rose Gold",
+      "price": 1600.20,
+      "brandId": 6,
+      "waterResistance": false,
+      "caseShape": "round",
+      "color": "gold",
+      "image": "/watches/rolex-cellini.png"
+    },
+    {
+      "id": 116,
+      "title": "Santos de Cartier Large",
+      "price": 700.10,
+      "brandId": 7,
+      "waterResistance": true,
+      "caseShape": "square",
+      "color": "silver",
+      "image": "/watches/cartier-santos.png"
+    },
+    {
+      "id": 117,
+      "title": "Tank Must Extra-Large",
+      "price": 2000,
+      "brandId": 7,
+      "waterResistance": false,
+      "caseShape": "rectangular",
+      "color": "black",
+      "image": "/watches/cartier-tank.png"
+    },
+    {
+      "id": 118,
+      "title": "G-Shock GA-2100FL",
+      "price": 400.22,
+      "brandId": 8,
+      "waterResistance": true,
+      "caseShape": "octagonal",
+      "color": "black",
+      "image": "/watches/casio-g-shock-2100FL.png"
+    },
+    {
+      "id": 119,
+      "title": "Classic Vintage Digital Gold",
+      "price": 800.20,
+      "brandId": 8,
+      "waterResistance": false,
+      "caseShape": "square",
+      "color": "gold",
+      "image": "/watches/casio-vintage.png"
+    },
+    {
+      "id": 120,
+      "title": "Casio Collection LQ",
+      "price": 700.29,
+      "brandId": 8,
+      "waterResistance": false,
+      "caseShape": "round",
+      "color": "black",
+      "image": "/watches/casio-collection-lq.png"
+    },
+    {
+      "id": 121,
+      "title": "Casio G-SHOCK GA-2100OAK Black",
+      "price": 800,
+      "brandId": 8,
+      "waterResistance": true,
+      "caseShape": "octagonal",
+      "color": "grey",
+      "image": "/watches/casio-g-shock-ga-2100OAK.png"
+    },
+    {
+      "id": 122,
+      "title": "Casio G-Shock GA-2000-1A2",
+      "price": 600.50,
+      "brandId": 8,
+      "waterResistance": true,
+      "caseShape": "round",
+      "color": "blue",
+      "image": "/watches/casio-g-shock-ga-2000-1A2.png"
+    },
+    {
+      "id": 123,
+      "title": "Guess Rebellious",
+      "price": 450.10,
+      "brandId": 9,
+      "waterResistance": true,
+      "caseShape": "round",
+      "color": "black",
+      "image": "/watches/guess-rebellious.png"
+    },
+    {
+      "id": 124,
+      "title": "Guess Dress",
+      "price": 550.20,
+      "brandId": 9,
+      "waterResistance": true,
+      "caseShape": "round",
+      "color": "silver",
+      "image": "/watches/guess-dress.png"
+    },
+    {
+      "id": 125,
+      "title": "Calvin Klein",
+      "price": 800,
+      "brandId": 11,
+      "waterResistance": false,
+      "caseShape": "round",
+      "color": "grey",
+      "image": "/watches/calvin-klein.png"
+    }
+	]
+}
