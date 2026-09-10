@@ -1,6 +1,6 @@
+import type { TProduct } from '@/shared/types/filter.types'
 import Image from 'next/image'
 import Link from 'next/link'
-import type { TProduct } from '../api/fetchProducts'
 
 export function ProductCard({ product, index }: { product: TProduct; index: number }) {
 	return (
