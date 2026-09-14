@@ -1,8 +1,15 @@
 import type { TProduct } from '@/shared/types/filter.types'
 import Image from 'next/image'
 import Link from 'next/link'
+import type { ReactNode } from 'react'
 
-export function ProductCard({ product, index }: { product: TProduct; index: number }) {
+interface Props {
+	product: TProduct
+	index: number
+	actionButton: ReactNode
+}
+
+export function ProductCard({ product, index, actionButton }: Props) {
 	return (
 		<article className="flex flex-col select-none w-full h-full">
 			<Link
@@ -35,9 +42,7 @@ export function ProductCard({ product, index }: { product: TProduct; index: numb
 					${product.price.toLocaleString('ru-RU', { minimumFractionDigits: 2 })}
 				</span>
 
-				<button type='button' className="mt-3 w-1/2 self-center py-2.5 border border-primary text-primary bg-transparent font-headline font-semibold text-[11px] uppercase tracking-wider text-center hover:bg-primary hover:text-background active:scale-[0.95] transition-all duration-300 outline-none cursor-pointer">
-					Add To Cart
-				</button>
+				{actionButton}
 			</div>
 		</article>
 	)

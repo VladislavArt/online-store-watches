@@ -2,6 +2,7 @@
 
 import { ProductCard } from '@/entities/product'
 import { useFilteredProducts } from '../lib/useFilteredProducts'
+import { AddToCartButton } from '@/features/cart'
 
 export function ProductsCatalog() {
 	const { products, isError, isLoading } = useFilteredProducts()
@@ -35,6 +36,9 @@ export function ProductsCatalog() {
 					key={product.id}
 					product={product}
 					index={index}
+					actionButton={
+						<AddToCartButton />
+					}
 				/>
 			))}
 		</div>
