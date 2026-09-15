@@ -1,8 +1,8 @@
 'use client'
 
-import { ProductCard } from '@/entities/product'
-import { useFilteredProducts } from '../lib/useFilteredProducts'
+import { ProductCard } from '@/entities/products'
 import { AddToCartButton } from '@/features/cart'
+import { useFilteredProducts } from '../lib/useFilteredProducts'
 
 export function ProductsCatalog() {
 	const { products, isError, isLoading } = useFilteredProducts()
@@ -36,9 +36,7 @@ export function ProductsCatalog() {
 					key={product.id}
 					product={product}
 					index={index}
-					actionButton={
-						<AddToCartButton />
-					}
+					actionButton={<AddToCartButton />}
 				/>
 			))}
 		</div>

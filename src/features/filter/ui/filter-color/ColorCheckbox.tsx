@@ -19,8 +19,8 @@ export function ColorCheckbox({ color }: Props) {
 				type="checkbox"
 				className="peer sr-only"
 				value={color.id}
-				checked={selectedColorId.includes(color.id)}
-				onChange={() => {updateParams('colorId', color.id)}}
+				checked={!!selectedColorId?.includes(color.id)}
+				onChange={() => {updateParams('color', color.id)}}
 			/>
 
 			<span

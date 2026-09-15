@@ -9,10 +9,10 @@ export default function useUpdateParams() {
 
 	const [isPending, startTransition] = useTransition()
 
-	const ARRAY_FILTER = ['brandId', 'colorId', 'caseShape']
+	const ARRAY_FILTER = ['brandId', 'color', 'caseShape']
 
 	const updateParams = (key: string, value: string) => {
-		const params = new URLSearchParams(searchParams.toString())
+		const params = new URLSearchParams(searchParams?.toString())
 
 		if (value === 'all') {
 			params.delete(key)
@@ -34,7 +34,7 @@ export default function useUpdateParams() {
 	}
 
 	const updateRangeParams = (min: number, max: number) => {
-		const params = new URLSearchParams(searchParams.toString())
+		const params = new URLSearchParams(searchParams?.toString())
 
 		if (min === 0) {
 			params.delete('price_gte')
@@ -56,10 +56,10 @@ export default function useUpdateParams() {
 	}
 
 	const resetFilters = () => {
-		const params = new URLSearchParams(searchParams.toString())
+		const params = new URLSearchParams(searchParams?.toString())
 
 		params.delete('brandId')
-		params.delete('colorId')
+		params.delete('color')
 		params.delete('caseShape')
 		params.delete('waterResistance')
 		params.delete('price_gte')

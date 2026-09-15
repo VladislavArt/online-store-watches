@@ -1,20 +1,25 @@
 import { MAX_PRICE } from '@/shared/config/filters'
+import { getRawParams } from '@/shared/lib/helpers/getRawParams'
+import { ProductQuerySchema } from '@/shared/types/filter.types'
 import { useSearchParams } from 'next/navigation'
 
 function useActiveFiltersKey() {
 	const searchParams = useSearchParams()
 
-	const gte = searchParams.get('price_gte')
-	const lte = searchParams.get('price_lte')
+	const raw = getRawParams(searchParams)
+	const validateParams = ProductQuerySchema.parse(raw)
 
-	const minValue = gte ? Number(gte) : 0
-	const maxValue = lte ? Number(lte) : MAX_PRICE
+	const minValue = validateParams.price_gte ?? 0
+	const maxValue = validateParams.price_lte ?? MAX_PRICE
 
 	return {
-		selectedBrandId: searchParams.getAll('brandId'),
-		selectedColorId: searchParams.getAll('colorId'),
-		selectedCaseShape: searchParams.getAll('caseShape'),
-		resistance: searchParams.get('waterResistance') || 'all',
+		selectedBrandId: validateParams.brandId,
+		selectedColorId: validateParams.color,
+		selectedCaseShape: validateParams.caseShape,
+		resistance:
+			validateParams.waterResistance !== undefined
+				? String(validateParams.waterResistance)
+				: 'all',
 		rangeMinPrice: minValue,
 		rangeMaxPrice: maxValue,
 		inputMinPrice: minValue === 0 ? '' : minValue,

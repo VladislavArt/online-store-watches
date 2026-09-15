@@ -45,7 +45,7 @@ export function CaseShape() {
 									className="w-4 h-4 border-primary accent-primary cursor-pointer transition-all duration-200"
 									type="checkbox"
 									value={item.id}
-									checked={selectedCaseShape.includes(item.id)}
+									checked={!!selectedCaseShape?.includes(item.id)}
 									onChange={() => updateParams('caseShape', item.id)}
 								/>
 								<span>{item.name}</span>

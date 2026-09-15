@@ -9,7 +9,7 @@ export function usePriceInputSync() {
 	const [, startTransition ] = useTransition()
 
 	const updatePriceInput = (id: string) => (values: { floatValue: number | undefined }) => {
-		const params = new URLSearchParams(searchParams.toString())
+		const params = new URLSearchParams(searchParams?.toString())
 
 		const queryKey = id === 'min' ? 'price_gte' : 'price_lte'
 		const currentNumValue = values.floatValue

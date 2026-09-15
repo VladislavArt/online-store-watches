@@ -18,7 +18,7 @@ async function HomePage() {
 			<div className="container flex flex-1 w-full py-12 gap-6">
 				<Suspense
 					fallback={
-						<aside className="sidebar-container w-[280px] animate-pulse">
+						<aside className="sidebar-container w-70 animate-pulse">
 							<div className="text-sm text-secondary font-main">
 								Загрузка панели фильтров...
 							</div>

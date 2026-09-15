@@ -60,7 +60,7 @@ export function BrandFilter() {
 									className="w-4 h-4 border-primary accent-primary cursor-pointer transition-all duration-200"
 									type="checkbox"
 									value={brand.id}
-									checked={selectedBrandId.includes(brand.id)}
+									checked={!!selectedBrandId?.includes(brand.id)}
 									onChange={() => updateParams('brandId', brand.id)}
 								/>
 								<span>{brand.name}</span>
