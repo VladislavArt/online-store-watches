@@ -1,5 +1,6 @@
 export { FilterPrice } from './ui/filter-price/FilterPrice'
 export { BrandFilter } from './ui/BrandFilter'
+export { BrandFilterErrorFallback } from './ui/BrandFilterErrorFallback'
 export { ButtonReset } from './ui/ButtonReset'
 export { CaseShape } from './ui/CaseShape'
 export { WaterResistance } from './ui/WaterResistance'

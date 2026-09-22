@@ -14,15 +14,10 @@ export function useFilteredProducts() {
 
 	const queryParams: ProductQueryParams = ProductQuerySchema.parse(rawPrams)
 
-	const {
-		data: products = [],
-		isLoading,
-		isError
-	} = useQuery({
+	return useQuery({
 		queryKey: ['products', queryParams],
 		queryFn: () => fetchProducts(queryParams),
-		placeholderData: keepPreviousData
+		placeholderData: keepPreviousData,
+		throwOnError: true
 	})
-
-	return { products, isLoading, isError }
 }

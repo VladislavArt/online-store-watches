@@ -46,6 +46,8 @@ export const ProductQuerySchema = z.object({
 
 export type ProductQueryParams = z.infer<typeof ProductQuerySchema>
 
+export type TProductId = string
+
 export const BrandSchema = z.object({
 	id: z.union([z.string(), z.number().transform(val => String(val))]),
 	name: z.string(),

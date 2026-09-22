@@ -8,7 +8,7 @@ export async function prefetchHomePage(queryClient: QueryClient) {
 		queryClient
 			.query({
 				queryKey: ['brands'],
-				queryFn: () => fetchBrands()
+				queryFn: fetchBrands
 			})
 			.catch(noop),
 

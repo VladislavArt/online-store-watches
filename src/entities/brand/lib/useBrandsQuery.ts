@@ -1,8 +1,8 @@
 import { fetchBrands } from '@/entities/brand'
-import { useQuery } from '@tanstack/react-query'
+import { useSuspenseQuery } from '@tanstack/react-query'
 
 export function useBrandsQuery() {
-	return useQuery({
+	return useSuspenseQuery({
 		queryKey: ['brands'],
 		queryFn: fetchBrands
 	})

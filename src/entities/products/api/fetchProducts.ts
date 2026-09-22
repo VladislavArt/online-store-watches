@@ -1,5 +1,8 @@
-import { ProductSchema, type ProductQueryParams, type TProduct } from '@/shared/types/filter.types'
-import z from 'zod'
+import {
+	ProductSchema,
+	type ProductQueryParams,
+	type TProduct
+} from '@/shared/types/filter.types'
 
 export async function fetchProducts(
 	params: ProductQueryParams
@@ -22,10 +25,8 @@ export async function fetchProducts(
 		const result = await response.json()
 		return ProductSchema.array().parse(result)
 	} catch (error) {
-		if (error instanceof z.ZodError) {
-			console.error('КРИТИЧЕСКАЯ ОШИБКА ВАЛИДАЦИИ ПРОДУКТОВ:', error)
-		} else {
-			console.error('Ошибка при получении продуктов с сервера:', error)
+		if (typeof window === 'undefined') {
+			return []
 		}
 		throw error
 	}

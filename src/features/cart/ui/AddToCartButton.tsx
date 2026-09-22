@@ -1,4 +1,10 @@
-export function AddToCartButton() {
+import type { TProduct } from '@/shared/types/filter.types'
+
+interface Props {
+	product: TProduct
+}
+
+export function AddToCartButton({ product }: Props) {
 	return (
 		<button
 			type="button"

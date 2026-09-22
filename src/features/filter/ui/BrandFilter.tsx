@@ -5,27 +5,11 @@ import useActiveFiltersKey from '../lib/useActiveFiltersKey'
 import useBrandFilter from '../lib/useBrandFilter'
 
 export function BrandFilter() {
-	const { brands, isLoading, isError } = useBrandFilter()
+	const brands = useBrandFilter()
 	const { updateParams } = useUpdateParams()
 	const { selectedBrandId } = useActiveFiltersKey()
-	
+
 	const [isOpen, setIsOpen] = useState(true)
-
-	if (isLoading) {
-		return (
-			<div className="text-sm text-secondary font-main">
-				Загрузка брендов...
-			</div>
-		)
-	}
-
-	if (isError || !brands) {
-		return (
-			<div className="text-sm text-red-500 font-main">
-				Ошибка загрузки брендов
-			</div>
-		)
-	}
 
 	return (
 		<section className={'pt-4 transition-opacity duration-200'}>

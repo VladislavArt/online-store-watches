@@ -3299,6 +3299,11 @@ react-dom@19.2.4:
   dependencies:
     scheduler "^0.27.0"
 
+react-error-boundary@^6.1.5:
+  version "6.1.5"
+  resolved "https://registry.yarnpkg.com/react-error-boundary/-/react-error-boundary-6.1.5.tgz#239cefdd181285377f2444461e254f07d2324927"
+  integrity sha512-l2nk+KhgM6e79tAiHEs3tXTdiTW4ARniKYMQN+cLY5vQFpDOkxuXKIC4uIwYuIKoMpFQ6jEbQz9wBArUmq7GWA==
+
 react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
