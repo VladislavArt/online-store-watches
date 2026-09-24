@@ -18,6 +18,7 @@ export function useFilteredProducts() {
 		queryKey: ['products', queryParams],
 		queryFn: () => fetchProducts(queryParams),
 		placeholderData: keepPreviousData,
+		staleTime: 5 * 60 * 1000,
 		throwOnError: true
 	})
 }
