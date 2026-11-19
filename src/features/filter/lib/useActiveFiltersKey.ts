@@ -1,6 +1,6 @@
 import { MAX_PRICE } from '@/shared/config/filters'
 import { getRawParams } from '@/shared/lib/helpers/getRawParams'
-import { ProductQuerySchema } from '@/shared/types/filter.types'
+import { ProductQuerySchema } from '@/shared/types/product.types'
 import { useSearchParams } from 'next/navigation'
 
 function useActiveFiltersKey() {

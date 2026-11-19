@@ -8,18 +8,18 @@ import { ProductDetailsError } from './ProductDetailsError'
 import { ProductDetailsSkeleton } from './ProductDetailsSkeleton'
 
 export function ProductDetailsPage() {
-	const { reset } = useQueryErrorResetBoundary()
+  const { reset } = useQueryErrorResetBoundary()
 
-	return (
-		<main className="container mx-auto py-8">
-			<ErrorBoundary
-				FallbackComponent={ProductDetailsError}
-				onReset={reset}
-			>
-				<Suspense fallback={<ProductDetailsSkeleton />}>
-					<ProductDetails />
-				</Suspense>
-			</ErrorBoundary>
-		</main>
-	)
+  return (
+    <div className="container mx-auto py-8">
+      <ErrorBoundary
+        FallbackComponent={ProductDetailsError}
+        onReset={reset}
+      >
+        <Suspense fallback={<ProductDetailsSkeleton />}>
+          <ProductDetails />
+        </Suspense>
+      </ErrorBoundary>
+    </div>
+  )
 }

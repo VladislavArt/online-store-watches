@@ -1,6 +1,6 @@
 import { fetchBrands } from '@/entities/brand/api/fetchBrands'
 import { fetchProducts } from '@/entities/products/api/fetchProducts'
-import type { ProductQueryParams } from '@/shared/types/filter.types'
+import type { ProductQueryParams } from '@/shared/types/product.types'
 import { noop, type QueryClient } from '@tanstack/react-query'
 
 export async function prefetchHomePage(queryClient: QueryClient) {

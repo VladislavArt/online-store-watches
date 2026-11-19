@@ -1,31 +1,33 @@
-import type { IWatchColorFilter } from '@/shared/types/filter.types'
-import useActiveFiltersKey from '../../lib/useActiveFiltersKey'
 import useUpdateParams from '@/shared/lib/hooks/useUpdateParams'
+import type { IWatchColorFilter } from '@/shared/types/color.types'
+import useActiveFiltersKey from '../../lib/useActiveFiltersKey'
 
 interface Props {
-	color: IWatchColorFilter
+  color: IWatchColorFilter
 }
 
 export function ColorCheckbox({ color }: Props) {
-	const { updateParams } = useUpdateParams()
-	const { selectedColorId } = useActiveFiltersKey()
+  const { updateParams } = useUpdateParams()
+  const { selectedColorId } = useActiveFiltersKey()
 
-	return (
-		<label 
-			className="relative cursor-pointer select-none group"
-			title={color.name}
-		>
-			<input
-				type="checkbox"
-				className="peer sr-only"
-				value={color.id}
-				checked={!!selectedColorId?.includes(color.id)}
-				onChange={() => {updateParams('color', color.id)}}
-			/>
+  return (
+    <label
+      className="relative cursor-pointer select-none group"
+      title={color.name}
+    >
+      <input
+        type="checkbox"
+        className="peer sr-only"
+        value={color.id}
+        checked={!!selectedColorId?.includes(color.id)}
+        onChange={() => {
+          updateParams('color', color.id)
+        }}
+      />
 
-			<span
-				style={{ backgroundColor: color.hex }}
-				className={`
+      <span
+        style={{ backgroundColor: color.hex }}
+        className={`
 					block w-6 h-6 rounded-full border border-black/10
 					transition-all duration-200 ease-in-out
 
@@ -37,8 +39,7 @@ export function ColorCheckbox({ color }: Props) {
 
 					${color.id === 'silver' ? 'border-secondary/70' : ''}
 				`}
-			/>
-		</label>
-	)
+      />
+    </label>
+  )
 }
-

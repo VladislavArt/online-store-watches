@@ -2,10 +2,11 @@ import {
 	ProductSchema,
 	type ProductQueryParams,
 	type TProduct
-} from '@/shared/types/filter.types'
+} from '@/shared/types/product.types'
 
 export async function fetchProducts(
-	params: ProductQueryParams
+	params: ProductQueryParams,
+	signal?: AbortSignal
 ): Promise<TProduct[]> {
 	const BASE_URL = 'http://localhost:4000'
 	const query = new URLSearchParams()
@@ -21,13 +22,21 @@ export async function fetchProducts(
 	})
 
 	try {
-		const response = await fetch(`${BASE_URL}/products?${query.toString()}`)
+		const response = await fetch(`${BASE_URL}/products?${query.toString()}`, {
+			signal
+		})
 		const result = await response.json()
 		return ProductSchema.array().parse(result)
 	} catch (error) {
+
+		if (error instanceof Error && error.name === 'AbortError') {
+			return []
+		}
+
 		if (typeof window === 'undefined') {
 			return []
 		}
+		
 		throw error
 	}
 }

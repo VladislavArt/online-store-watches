@@ -13,6 +13,7 @@
   "dependencies": {
     "@tanstack/react-query": "^5.100.14",
     "axios": "^1.17.0",
+    "immer": "^11.1.21",
     "next": "16.2.6",
     "rc-slider": "^11.1.9",
     "react": "19.2.4",

@@ -1,5 +1,5 @@
 import { fetchProductById } from '@/entities/products/api/fetchProductById'
-import type { TProductId } from '@/shared/types/filter.types'
+import type { TProductId } from '@/shared/types/product.types'
 import { useSuspenseQuery } from '@tanstack/react-query'
 
 export function useGetProduct(id: TProductId) {

@@ -1,4 +1,4 @@
-import { BrandSchema, type TBrand } from '@/shared/types/filter.types'
+import { BrandSchema, type TBrand } from '@/shared/types/brand.types'
 
 export async function fetchBrands(): Promise<TBrand[]> {
 	try {

@@ -1,14 +1,19 @@
-import type { TProduct } from '@/shared/types/filter.types'
+import type { TProduct } from '@/shared/types/product.types'
+import { useStore } from 'zustand'
+import { cartStore } from '../model/cart.store'
 
 interface Props {
 	product: TProduct
 }
 
 export function AddToCartButton({ product }: Props) {
+	const setAddItems = useStore(cartStore, state => state.setAddItemsToCart)
+
 	return (
 		<button
 			type="button"
 			className="mt-3 w-1/2 self-center py-2.5 border border-primary text-primary bg-transparent font-headline font-semibold text-[11px] uppercase tracking-wider text-center hover:bg-primary hover:text-background active:scale-[0.95] transition-all duration-300 outline-none cursor-pointer"
+			onClick={() => setAddItems(product)}
 		>
 			Add To Cart
 		</button>

@@ -1,7 +1,7 @@
 'use client'
 
 import { AddToCartButton } from '@/features/cart'
-import type { TProductId } from '@/shared/types/filter.types'
+import type { TProductId } from '@/shared/types/product.types'
 import { skipToken } from '@tanstack/react-query'
 import Image from 'next/image'
 import Link from 'next/link'

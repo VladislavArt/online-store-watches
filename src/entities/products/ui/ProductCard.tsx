@@ -1,4 +1,4 @@
-import type { TProduct } from '@/shared/types/filter.types'
+import type { TProduct } from '@/shared/types/product.types'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { ReactNode } from 'react'
@@ -10,7 +10,6 @@ interface Props {
 }
 
 export function ProductCard({ product, index, actionButton }: Props) {
-
 	return (
 		<article className="flex flex-col select-none w-full h-full">
 			<Link
@@ -31,7 +30,7 @@ export function ProductCard({ product, index, actionButton }: Props) {
 				<h3 className="font-headline text-base font-light text-primary tracking-wide line-clamp-1">
 					<Link
 						href={`/products/${product.id}`}
-						className='hover:text-accent transition-colors duration-200 outline-none focus-visible:underline'
+						className="hover:text-accent transition-colors duration-200 outline-none focus-visible:underline"
 					>
 						{product.title}
 					</Link>
