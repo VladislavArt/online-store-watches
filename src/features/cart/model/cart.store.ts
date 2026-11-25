@@ -78,7 +78,12 @@ export const cartStore = createStore<CartStore>()(
       }
     })),
     {
-      name: 'cart'
+      name: 'cart',
+      partialize: state => ({
+        items: state.items,
+        totalCount: state.totalCount,
+        totalAmount: state.totalAmount
+      })
     }
   )
 )

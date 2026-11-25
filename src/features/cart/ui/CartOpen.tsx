@@ -1,13 +1,30 @@
 'use client'
 
+import { useEffect } from 'react'
 import { useStore } from 'zustand'
 import { cartStore } from '../model/cart.store'
+import { CartFooter } from './CartFooter'
 import { CartHeader } from './CartHeader'
 import { CartItem } from './CartItem'
 
 export function CartOpen() {
   const isOpen = useStore(cartStore, state => state.isOpen)
   const items = useStore(cartStore, state => state.items)
+  const toggleCart = useStore(cartStore, state => state.setIsOpen)
+
+  useEffect(() => {
+    if (!isOpen) return
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') toggleCart()
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [isOpen, toggleCart])
 
   if (!isOpen) return null
 
@@ -24,7 +41,7 @@ export function CartOpen() {
         {items.length === 0 ? (
           <div className="h-full flex flex-col items-center justify-center text-center p-6 select-none">
             <span className="text-4xl mb-3 opacity-60">🛒</span>
-            <p className="text-sm text-primary font-medium">
+            <p className="text-sm text-surface font-medium">
               Ваша корзина пуста
             </p>
             <p className="text-xs text-secondary/60 mt-1">
@@ -45,6 +62,8 @@ export function CartOpen() {
           </ul>
         )}
       </div>
+
+      <CartFooter />
     </aside>
   )
 }
